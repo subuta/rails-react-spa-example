@@ -1,0 +1,32 @@
+{
+  "name": "rails-react-spa-example",
+  "version": "1.0.0",
+  "description": "api_only Rails + React(SPA) example.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subuta/rails-react-spa-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subuta/rails-react-spa-example/issues"
+  },
+  "homepage": "https://github.com/subuta/rails-react-spa-example#readme",
+  "dependencies": {
+    "laravel-mix": "^2.1.14",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}
