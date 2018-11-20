@@ -1,17 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import request from 'src/utils/request'
+import { BrowserRouter } from 'react-router-dom'
 
-request.get('/todos').then((response) => {
-  console.log(response.data);
-})
+import App from './components/App'
 
 const app = (
-  <h1>Hello world</h1>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 )
 
 ReactDOM.render(app, document.querySelector('#app'))
-
-if (module.hot) {
-  module.hot.accept()
-}

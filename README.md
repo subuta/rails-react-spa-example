@@ -34,11 +34,8 @@ bundle install
 # Install Node.js dependencies
 cd front && npm i
 
-# Initialize DB(SQLite)
+# Initialize & Migrate & Seed DB(SQLite)
 bundle exec rake db:setup
-
-# Migrate DB
-bundle exec rake db:migrate
 
 # Start Rails(API server)
 bundle exec rails s -b 0.0.0.0

@@ -22,6 +22,12 @@ mix.setPublicPath('public')
     processCssUrls: false,
     postCss: [tailwindcss(path.resolve(__dirname, './tailwind.js'))]
   })
+  .babelConfig({
+    plugins: [
+      'react-hot-loader/babel',
+      'transform-class-properties'
+    ]
+  })
   .webpackConfig(webpack => ({
     resolve: {
       modules: [

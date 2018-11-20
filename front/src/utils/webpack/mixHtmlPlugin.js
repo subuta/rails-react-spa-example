@@ -25,7 +25,9 @@ class MixHtmlPlugin {
 
       const files = _.flattenDeep(_.map(chunks, (chunk) => chunk.files))
       const assets = _.transform(files, (result, file) => {
-        const filePath = mixManifest[file] || file
+        // Ensure leading slash(mainly for HMR files).
+        const filePath = '/' + _.trimStart(mixManifest[file] || file, '/')
+
         const filename = _.first(filePath.split('?'))
         const ext = _.trimStart(path.extname(filename), '.')
         result[ext].push(filePath)

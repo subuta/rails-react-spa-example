@@ -26,13 +26,21 @@
   "homepage": "https://github.com/subuta/rails-react-spa-example#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "dayjs": "^1.7.7",
     "laravel-mix": "^2.1.14",
+    "lodash": "^4.17.11",
+    "normalizr": "^3.3.0",
+    "path-to-regexp": "^2.4.0",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "ejs": "^2.6.1",
+    "react-hot-loader": "^4.3.12",
     "tailwindcss": "^0.7.2"
   }
 }
