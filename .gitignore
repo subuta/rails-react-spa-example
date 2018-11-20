@@ -21,3 +21,6 @@
 
 # Ignore Node.js files
 /node_modules
+
+public/hot
+public/mix-manifest.json

@@ -6,7 +6,6 @@ api_only Rails + React(SPA) example.
 - ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin16]
 - Node.js v10.5.0
 - Rails 5.1.6
-- wget(or curl)
 
 ### How to develop
 
@@ -23,20 +22,23 @@ npm init -f
 npm install laravel-mix react react-dom -S
 
 # Copy and save laravel-mix configuration(`webpack.mix.js`)
-wget https://raw.githubusercontent.com/laravel/laravel/master/webpack.mix.js
+cp -r node_modules/laravel-mix/setup/webpack.mix.js ./
 ```
 
 #### Development
 
 ```
-# Install dependencies
-bundle install && npm install
+# Install ruby dependencies
+bundle install
+
+# Install Node.js dependencies
+cd front && npm i
 
 # Start Rails(API server)
 bundle exec rails s -b 0.0.0.0
 
 # Start front-end dev server.
-npm run hot
+cd front && npm run hot
 ```
 
 #### Build

@@ -2,7 +2,7 @@ const mix = require('laravel-mix')
 const tailwindcss = require('tailwindcss')
 
 // Load custom html plugin for generate index.html.
-const MixHtmlPlugin = require('./front/utils/webpack/mixHtmlPlugin')
+const MixHtmlPlugin = require('./utils/webpack/mixHtmlPlugin')
 
 /*
  |--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ mix.setPublicPath('public')
   .postCss('front/index.css', 'public/css')
   .options({
     processCssUrls: false,
-    postCss: [tailwindcss('./tailwind.js')]
+    postCss: [tailwindcss(path.resolve(__dirname, './tailwind.js'))]
   })
   .webpackConfig(webpack => ({
     plugins: [
