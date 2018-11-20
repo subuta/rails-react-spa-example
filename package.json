@@ -28,5 +28,10 @@
     "laravel-mix": "^2.1.14",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1",
+    "ejs": "^2.6.1",
+    "tailwindcss": "^0.7.2"
   }
 }

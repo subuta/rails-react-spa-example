@@ -25,3 +25,23 @@ npm install laravel-mix react react-dom -S
 # Copy and save laravel-mix configuration(`webpack.mix.js`)
 wget https://raw.githubusercontent.com/laravel/laravel/master/webpack.mix.js
 ```
+
+#### Development
+
+```
+# Install dependencies
+bundle install && npm install
+
+# Start Rails(API server)
+bundle exec rails s -b 0.0.0.0
+
+# Start front-end dev server.
+npm run hot
+```
+
+#### Build
+
+```
+# Build production assets (will output assets to `public`)
+npm run production
+```
