@@ -2,7 +2,7 @@ const mix = require('laravel-mix')
 const tailwindcss = require('tailwindcss')
 
 // Load custom html plugin for generate index.html.
-const MixHtmlPlugin = require('./utils/webpack/mixHtmlPlugin')
+const MixHtmlPlugin = require('./src/utils/webpack/mixHtmlPlugin')
 
 /*
  |--------------------------------------------------------------------------
@@ -23,6 +23,14 @@ mix.setPublicPath('public')
     postCss: [tailwindcss(path.resolve(__dirname, './tailwind.js'))]
   })
   .webpackConfig(webpack => ({
+    resolve: {
+      modules: [
+        path.resolve(__dirname, '../node_modules'),
+        // SEE: https://stackoverflow.com/questions/27502608/resolving-require-paths-with-webpack/36574982#36574982
+        '.'
+      ]
+    },
+
     plugins: [
       new MixHtmlPlugin()
     ]

@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/subuta/rails-react-spa-example#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "laravel-mix": "^2.1.14",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"

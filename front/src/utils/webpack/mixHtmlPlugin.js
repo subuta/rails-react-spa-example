@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const _ = require('lodash')
 
-const ROOT_PATH = path.resolve(__dirname, '../../../')
+const ROOT_PATH = path.resolve(__dirname, '../../../../')
 
 const TEMPLATE_PATH = path.resolve(ROOT_PATH, './front/index.ejs')
 const MIX_MANIFEST_PATH = path.resolve(ROOT_PATH, './public/mix-manifest.json')
